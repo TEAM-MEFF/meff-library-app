@@ -1,11 +1,12 @@
 const Testimonials = () => {
   return (
     <div>
-      <div>
-        <h4>WHAT OUR USERS SAY</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum?</p>
-        <p>Lorem ipsum dolor sit amet.</p>
+      <div className="the container relative w-[250px] h-[350px] bg-[green] ">
+        <p>Testimonials goes here</p>
       </div>
+      <div className="the-card -rotate-180 transition-transform duration-500"></div>
+      <div className="the front"></div>
+      <div className="the back"></div>
     </div>
   )
 }

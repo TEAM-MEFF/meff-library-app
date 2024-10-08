@@ -1,7 +1,11 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import IonIcon from "@reacticons/ionicons";
+
+// import { }
 const Footer = () => {
   return (
-    <div className="flex w-[full] justify-around ml-20 mt-20 bg-[#0E345A] text-white">
+    <div className="flex w-[full] h-[100vh] justify-around pt-48 bg-[#0E345A] text-white ">
       <div className="flex flex-col gap-6">
         <h6 className="font-semibold">MEFF LIBRARY</h6>
         <p>500 Terry Francine St.</p>
@@ -18,11 +22,19 @@ const Footer = () => {
       </div>
       <div className="flex flex-col gap-6">
         <h6 className="font-semibold">SOCIALS</h6>
-        <div className="flex flex-col gap-6">
-          <Link to="https://www.facebook.com/">Facebook</Link>
-          <Link to="https://x.com/i/flow/login">Twitter</Link>
-          <Link to="https://www.instagram.com/">Instagram</Link>
-          <Link to="https://www.pinterest.com/">Pinterest</Link>
+        <div className="flex flex-col gap-3">
+          <Link to="https://www.facebook.com/">
+            <IonIcon name="logo-facebook" className="text-3xl" />
+          </Link>
+          <Link to="https://x.com/i/flow/login">
+            <IonIcon name="logo-twitter" className="text-3xl" />
+          </Link>
+          <Link to="https://www.instagram.com/">
+            <IonIcon name="logo-instagram" className="text-3xl" />
+          </Link>
+          <Link to="https://www.pinterest.com/">
+            <IonIcon name="logo-pinterest" className="text-3xl" />
+          </Link>
         </div>
       </div>
       <div className="flex flex-col gap-6">
@@ -35,7 +47,9 @@ const Footer = () => {
         <div className="flex">
           <input type="checkbox" />
           <p>Yes, subscribe me to your newsletter.</p>
-          <button className="border-2 w-[100px] flex ml-10 justify-center">Submit</button>
+          <button className="border-2 w-[100px] flex ml-10 justify-center">
+            Submit
+          </button>
         </div>
       </div>
     </div>
