@@ -11,6 +11,7 @@ const BookList = () => {
         <Navbar/>
         <Link to="/add-new">Add Book</Link>
         <div>BookList Content goes here</div>
+        <Testimonials/>
         <Footer/>
     </div>
   )
