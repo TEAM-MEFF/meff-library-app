@@ -1,23 +1,25 @@
 import pic from "./girl.jpg";
+import pic1 from "./guy1.png";
+import pic2 from"./lady.jpg";
 import IonIcon from "@reacticons/ionicons";
 
 const Testimonials = () => {
   return (
     <div className=" bg-white]">
-      <h1 className="mt-48 ml-28 text-2xl underline">TESTIMONIALS</h1>
-      <div className="testimonialparent p-4 rounded-xl flex">
-        <div className="testimonies bg-[black] shadow-lg shadow-gray-50 w-fit h-fit p-8 text-center ">
+      <h1 className="mt-48 ml-[550px] text-4xl underline font-semibold ">TESTIMONIALS</h1>
+      <div className="testimonialparent p-4 rounded-xl flex gap-10 mt-10 ">
+        <div className="testimonies bg-[#0E345A] shadow-lg shadow-black w-fit h-fit p-8 text-center ">
           <div className="">
             <div>
               <div>
                 <div className="text-white">
                   <img
-                    className="w-[100px] h-[100px] rounded-full"
+                    className="w-[100px] h-[100px] rounded-full ml-16 mb-6"
                     src={pic}
                     alt="pic"
                   />
-                  <div>
-                    <div>
+                  <div className="flex justify-evenly">
+                    <div className="text-[yellow]">
                       <span>
                         <IonIcon name="star" />
                       </span>
@@ -48,18 +50,18 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-        <div className="testimonies bg-[black] shadow-lg shadow-gray-50 w-fit h-fit p-8 text-center ">
+        <div className="testimonies bg-[#0E345A] shadow-lg shadow-black w-fit h-fit p-8 text-center ">
           <div className="">
             <div>
               <div>
                 <div className="text-white">
                   <img
-                    className="w-[100px] h-[100px] rounded-full"
-                    src={pic}
+                    className="w-[100px] h-[100px] rounded-full ml-16 mb-6"
+                    src={pic1}
                     alt="pic"
                   />
-                  <div>
-                    <div>
+                  <div className="flex justify-evenly">
+                    <div className="text-[yellow]">
                       <span>
                         <IonIcon name="star" />
                       </span>
@@ -76,7 +78,7 @@ const Testimonials = () => {
                         <IonIcon name="star-half" />
                       </span>
                     </div>
-                    <p>4 days ago</p>
+                    <p>1 week ago</p>
                   </div>
                   <p>
                     <span>"</span>Remedy Online has transformed my career! The
@@ -84,24 +86,24 @@ const Testimonials = () => {
                     the instructors were top-notch!"
                   </p>
                   <br />
-                  <h4>Sarah Afrakomah</h4>
+                  <h4>Abdullah Hussein</h4>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="testimonies bg-[black] shadow-lg shadow-gray-50 w-fit h-fit p-8 text-center ">
+        <div className="testimonies bg-[#0E345A] shadow-lg shadow-black w-fit h-fit p-8 text-center ">
           <div className="">
             <div>
               <div>
                 <div className="text-white">
                   <img
-                    className="w-[100px] h-[100px] rounded-full"
-                    src={pic}
+                    className="w-[100px] h-[100px] rounded-full ml-16 mb-6"
+                    src={pic2}
                     alt="pic"
                   />
-                  <div>
-                    <div>
+                  <div className="flex justify-evenly">
+                    <div className="text-[yellow]">
                       <span>
                         <IonIcon name="star" />
                       </span>
@@ -118,7 +120,7 @@ const Testimonials = () => {
                         <IonIcon name="star-half" />
                       </span>
                     </div>
-                    <p>4 days ago</p>
+                    <p>3 months ago</p>
                   </div>
                   <p>
                     <span>"</span>Remedy Online has transformed my career! The
@@ -126,24 +128,24 @@ const Testimonials = () => {
                     the instructors were top-notch!"
                   </p>
                   <br />
-                  <h4>Sarah Afrakomah</h4>
+                  <h4>Jane Smith</h4>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="testimonies bg-[black] shadow-lg shadow-gray-50 w-fit h-fit p-8 text-center ">
+        <div className="testimonies bg-[#0E345A] shadow-lg shadow-black w-fit h-fit p-8 text-center ">
           <div className="">
             <div>
               <div>
                 <div className="text-white">
                   <img
-                    className="w-[100px] h-[100px] rounded-full"
+                    className="w-[100px] h-[100px] rounded-full ml-16 mb-6"
                     src={pic}
                     alt="pic"
                   />
-                  <div>
-                    <div>
+                  <div className="flex justify-evenly">
+                    <div className="text-[yellow]">
                       <span>
                         <IonIcon name="star" />
                       </span>
@@ -175,12 +177,12 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-      <div className="carousel static top-4 left-1/2 overflow-hidden">
-        <input type="radio" name="carousel" id="slide1" checked />
-        <input type="radio" name="carousel" id="slide2" checked />
-        <input type="radio" name="carousel" id="slide3" checked />
-        <input type="radio" name="carousel" id="slide4" checked />
-        <input type="radio" name="carousel" id="slide5" checked />
+      <div className="carousel static top-4 left-1/2 overflow-hidden ml-[700px]">
+        <input className="cursor-pointer" type="radio" name="carousel" id="slide1" checked />
+        <input className="cursor-pointer" type="radio" name="carousel" id="slide2" checked />
+        <input className="cursor-pointer" type="radio" name="carousel" id="slide3" checked />
+        <input className="cursor-pointer" type="radio" name="carousel" id="slide4" checked />
+        <input className="cursor-pointer" type="radio" name="carousel" id="slide5" checked />
       </div>
     </div>
   );
