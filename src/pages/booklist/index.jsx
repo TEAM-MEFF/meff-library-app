@@ -3,15 +3,17 @@ import Hero from "./components/Hero";
 import Testimonials from "./components/Testimonials";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import NavbarResponsive from "../../components/NavbarResponsive";
 
 
 const BookList = () => {
   return (
     <div>
-        <Navbar/>
-        <Link to="/add-new">Add Book</Link>
-        <div>BookList Content goes here</div>
-        <Footer/>
+      {/* <Navbar /> */}
+      <NavbarResponsive />
+      <Link to="/add-new">Add Book</Link>
+      <div>BookList Content goes here</div>
+      <Footer />
     </div>
   )
 }
