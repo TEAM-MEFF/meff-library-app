@@ -1,6 +1,7 @@
 import pic from "./girl.jpg";
 import pic1 from "./guy1.png";
 import pic2 from"./lady.jpg";
+import pic3 from "./student-guyy.jpg";
 import IonIcon from "@reacticons/ionicons";
 
 const Testimonials = () => {
@@ -39,9 +40,7 @@ const Testimonials = () => {
                     <p>4 days ago</p>
                   </div>
                   <p>
-                    <span>"</span>Remedy Online has transformed my career! The
-                    self-paced courses allowed me to learn at my own speed, and
-                    the instructors were top-notch!"
+                    <span>"</span>This was overall a wonderful experience that I would highly recommend to anyone I know who wants to improve their instruction practices. It has fundamentally changed how I approach Special Collections and Archives instruction!"
                   </p>
                   <br />
                   <h4>Sarah Afrakomah</h4>
@@ -120,7 +119,7 @@ const Testimonials = () => {
                         <IonIcon name="star-half" />
                       </span>
                     </div>
-                    <p>3 months ago</p>
+                    <p>1 months ago</p>
                   </div>
                   <p>
                     <span>"</span>Remedy Online has transformed my career! The
@@ -141,7 +140,7 @@ const Testimonials = () => {
                 <div className="text-white">
                   <img
                     className="w-[100px] h-[100px] rounded-full ml-16 mb-6"
-                    src={pic}
+                    src={pic3}
                     alt="pic"
                   />
                   <div className="flex justify-evenly">
@@ -162,7 +161,7 @@ const Testimonials = () => {
                         <IonIcon name="star-half" />
                       </span>
                     </div>
-                    <p>4 days ago</p>
+                    <p>3 months ago</p>
                   </div>
                   <p>
                     <span>"</span>Remedy Online has transformed my career! The
@@ -170,7 +169,7 @@ const Testimonials = () => {
                     the instructors were top-notch!"
                   </p>
                   <br />
-                  <h4>Sarah Afrakomah</h4>
+                  <h4>Stephen Appiah</h4>
                 </div>
               </div>
             </div>
