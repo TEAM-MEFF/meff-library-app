@@ -7,8 +7,8 @@ const AddBook = () => {
     <div>
       <Navbar />
       <div>AddBook Content goes here</div>
-      <Testimonials/>
-      <Footer/>
+      <Testimonials />
+      <Footer />
     </div>
   );
 };
