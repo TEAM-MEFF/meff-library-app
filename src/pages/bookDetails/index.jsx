@@ -1,6 +1,14 @@
+import Testimonies from "../../components/Testimonies";
+
 const BookDetails = () => {
   return (
-    <div>BookDetails</div>
+    <div>
+      <h1>BookDetails</h1>
+      {/* <Testimonies /> */}
+      <br />
+      <h1>Hi</h1>
+      <button className="border-2">Submit</button>
+    </div>
   )
 }
 
