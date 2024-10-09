@@ -46,16 +46,16 @@ const HeroCarousel = () => {
     };
 
     return (
-        <div className="relative w-full max-w-[800px] mx-auto">
+        <div className="relative w-full mx-auto">
             {/* Image and Overlay */}
             <div
-                className="relative w-full h-[400px] bg-center bg-cover duration-500 transition-all ease-in-out"
+                className="relative w-full h-[450px] bg-center bg-cover duration-500 transition-all ease-in-out"
                 style={{ backgroundImage: `url(${images[currentIndex].src})` }}
             >
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
                     {/* Text on Image */}
-                    <h2 className="text-white text-2xl md:text-4xl font-semibold text-center mt-56">
+                    <h2 className="text-white text-2xl md:text-4xl font-semibold text-center my-auto w-[900px] h-6">
                         {images[currentIndex].text}
                     </h2>
                 </div>
@@ -63,7 +63,7 @@ const HeroCarousel = () => {
 
             {/* Left Arrow */}
             <div
-                className="absolute top-[50%] left-5 text-white cursor-pointer text-5xl bg-[#0e345aa4] px-2 rounded-md"
+                className="absolute top-[50%] left-5 text-white cursor-pointer text-5xl bg-[#0e345aa4] pb-3 px-3 rounded-full"
                 onClick={prevSlide}
             >
                 &#8249;
@@ -71,7 +71,7 @@ const HeroCarousel = () => {
 
             {/* Right Arrow */}
             <div
-                className="absolute top-[50%] right-5 text-white cursor-pointer text-5xl bg-[#0e345aa4]  px-2 rounded-md"
+                className="absolute top-[50%] right-5 text-white cursor-pointer text-5xl bg-[#0e345aa4] pb-3 px-3 rounded-full"
                 onClick={nextSlide}
             >
                 &#8250;
