@@ -12,7 +12,7 @@ const NavbarResponsive = () => {
     let [open, setOpen] = useState(false);
 
     return (
-        <header className='flex justify-between md:flex-col bg-slate-200 fixed w-full'>
+        <header className='flex justify-between md:flex-col bg-slate-200 sticky top-0 z-[1] w-full'>
             <div className='flex items-center md:w-[92%]  mx-auto justify-center md:justify-between py-2 bg-slate-200'>
                 <div className="content-center items-center">
                     <Link href="#">
