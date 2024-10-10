@@ -1,3 +1,4 @@
+import EditForm from "../../components/EditForm";
 import Testimonies from "../../components/Testimonies";
 
 const BookDetails = () => {
@@ -7,6 +8,8 @@ const BookDetails = () => {
       {/* <Testimonies /> */}
       <br />
       <h1>Hi</h1>
+      <EditForm/>
+    
       <button className="border-2">Submit</button>
     </div>
   )

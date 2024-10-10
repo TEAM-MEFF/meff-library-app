@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../constants";
 
 const AddForm = () => {
+  const [authors, setAuthors] = useState([]); // variable to store...
+
+  const getAuthors = async () => {
+    const response = await axios.get(`${BASE_URL}/authors`); // variable to fetch...
+    // console.table(response.data);
+    setAuthors(response.data);
+  };
+
+  useEffect(() => {
+    getAuthors(); // something to run the function...
+  }, []);
+
   const [rating, setRating] = useState(0); // State for rating
-  const [hover, setHover] = useState(0);   // State for hover effect
+  const [hover, setHover] = useState(0); // State for hover effect
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -29,15 +41,15 @@ const AddForm = () => {
   };
 
   return (
-    <div className="form w-[100%] h-[160vh] pt-20 bg-cover">
+    <div className="form w-[100%] h-[160vh] pt-20  bg-cover">
       <form
         onSubmit={handleSubmit}
-        className="w-[50%] h-[130vh] bg-gray-100 mx-auto border-4 rounded-lg"
+        className="w-fit h-[130vh] bg-gray-100 mx-auto border-4 rounded-lg"
       >
         <br />
         <div className="m-14">
           <h3 className="flex justify-center mb-7 font-semibold text-3xl">
-            Add Book Form
+            Add A New Book
           </h3>
           <hr className="border-2 border-[#0E345A]" />
           <div className="mt-10">
@@ -50,27 +62,32 @@ const AddForm = () => {
             />
           </div>
           <br />
-          <div className="flex">
-            <label htmlFor="author">Author</label>
-            <input
-              type="text"
-              name="author"
-              id="author"
-              className="border-2 ml-[101px] w-[25rem]"
-            />
-          </div>
+          <label htmlFor="author">Author</label>
+
+          <select className="ml-24 w-[25rem] h-7" name="authors" id="authors">
+            <option disabled selected></option>
+            {authors.map((author) => {
+              return (
+                <option key={author._id} value={author._id}>
+                  {author.name}
+                </option>
+              );
+            })}
+          </select>
+          <br />
+
           <br />
           <div className="flex">
             <div className="flex flex-col">
-              <label htmlFor="publisher">Publisher</label>
+              <label htmlFor="coverpage">Cover Page</label>
               <input
-                type="text"
-                name="publisher"
-                id="publisher"
+                type="file"
+                name="coverpage"
+                id="coverpage"
                 className="border-2"
               />
             </div>
-            <div className="flex flex-col ml-52">
+            <div className="flex flex-col ml-20">
               <label htmlFor="year-of-publish">Year of Publish</label>
               <input
                 type="date"
@@ -129,7 +146,11 @@ const AddForm = () => {
                   <button
                     type="button"
                     key={index}
-                    className={index <= (hover || rating) ? "text-yellow-500" : "text-gray-400"}
+                    className={
+                      index <= (hover || rating)
+                        ? "text-yellow-500"
+                        : "text-gray-400"
+                    }
                     onClick={() => setRating(index)} // Set rating on click
                     onMouseEnter={() => setHover(index)} // Set hover effect
                     onMouseLeave={() => setHover(rating)} // Reset hover to current rating
@@ -143,7 +164,7 @@ const AddForm = () => {
           <br />
           <button
             type="submit"
-            className="border-2 flex ml-60 w-36 h-10 justify-center items-center bg-[#0E345A] text-white rounded-lg"
+            className="border-2 flex mx-60 w-36 h-10 justify-center items-center bg-[#0E345A] text-white rounded-lg"
           >
             Submit
           </button>
