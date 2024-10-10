@@ -5,10 +5,10 @@
 }
 
 /* .landingPage {
-  background-image: url(./assets/images/books-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
+    background-image: url(./assets/images/books-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  } */
 
 .flip-card {
   perspective: 1000px;
@@ -108,4 +108,4 @@
 
 .btn:hover {
   border: 1px solid #0e345a;
-}
+
