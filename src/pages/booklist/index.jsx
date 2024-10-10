@@ -6,6 +6,8 @@ import Footer from "../../components/Footer";
 import NavbarResponsive from "../../components/NavbarResponsive";
 import SignUp from "../../components/SignUp";
 import Login from "../../components/Login";
+import Testimonies from "../../components/Testimonies";
+import BookFetch from "../bookFetch/BookFetch";
 
 
 const BookList = () => {
@@ -14,10 +16,13 @@ const BookList = () => {
       {/* <NavbarResponsive /> */}
       {/* <Hero /> */}
       {/* <Link to="/add-new">Add Book</Link> */}
-      <SignUp />
-      <Login />
+      <BookFetch />
+      {/* <SignUp /> */}
+      {/* <Login /> */}
+      {/* <Testimonies /> */}
+      {/* <Testimonials /> */}
       {/* <div>BookList Content goes here</div> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
