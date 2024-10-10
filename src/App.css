@@ -108,4 +108,9 @@
 
 .btn:hover {
   border: 1px solid #0e345a;
+}
 
+.form {
+  background-image: url("./components/backgroundform.jpg");
+  background-repeat: no-repeat;
+}
