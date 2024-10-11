@@ -18,6 +18,18 @@ function App() {
       path: "/books/:id",
       element: <BookDetails />
     },
+    {
+      path: "/edit",
+      element: <BookList />
+    },
+    {
+      path: "/add-new",
+      element: <AddBook />
+    },
+    {
+      path: "/books/:id",
+      element: <BookDetails />
+    },
   ]);
 
   return <RouterProvider router={router} />

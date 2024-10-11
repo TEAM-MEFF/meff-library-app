@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../constants";
 
-const AddForm = () => {
+const EditForm = () => {
   const [rating, setRating] = useState(0); // State for rating
   const [hover, setHover] = useState(0); // State for hover effect
 
@@ -119,4 +119,4 @@ const AddForm = () => {
   );
 };
 
-export default AddForm;
+export default EditForm;
