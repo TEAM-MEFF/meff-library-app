@@ -64,11 +64,11 @@ const AddForm = () => {
           <br />
           <label htmlFor="author">Author</label>
 
-          <select className="ml-24 w-[25rem] h-7" name="authors" id="authors">
-            <option disabled selected></option>
+          <select className="ml-24 w-[25rem] h-7" name="author" id="author">
+            <option disabled defaultValue={"Select an Author"}>Select an Author</option>
             {authors.map((author) => {
               return (
-                <option key={author._id} value={author._id}>
+                <option key={author._id} value={author._id}  >
                   {author.name}
                 </option>
               );
