@@ -46,8 +46,8 @@ const Login = () => {
                     <button
                         type="submit"
                         className="w-full bg-[#0E345A] text-white py-3 rounded-lg hover:bg-[#0e345ade] transition-colors mb-5"
-                    >
-                        Submit
+                    ><Link to="/">
+                            Login</Link>
                     </button>
                     <div>
                         <p className="p line mb-3">Or Sign In With</p>
@@ -58,7 +58,7 @@ const Login = () => {
                     </div>
                     <p className="text-center text-sm text-gray-600 mt-5">
                         New Here?{" "}
-                        <Link className="text-blue-600 font-semibold hover:underline">
+                        <Link className="text-blue-600 font-semibold hover:underline" to="/sign-up">
                             Sign Up
                         </Link>
                     </p>

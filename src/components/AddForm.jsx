@@ -26,13 +26,14 @@ const AddForm = () => {
       // Post data to API
       const response = await axios.post(`${BASE_URL}/books`, {
         title: formData.get("title"),
-        author: formData.get("author.name"),
-        publisher: formData.get("publisher"),
-        yearOfPublish: formData.get("year-of-publish"),
-        pageCount: formData.get("page-count"),
-        genre: formData.get("genre"),
         description: formData.get("description"),
-        rating: rating, // Submit the star rating
+        content: formData.get("description"),
+        author: formData.get("author"),
+        // publisher: formData.get("publisher"),
+        // yearOfPublish: formData.get("year-of-publish"),
+        // pageCount: formData.get("page-count"),
+        genre: formData.get("genre"),
+        // rating: rating, // Submit the star rating
       });
       console.log("Form submitted successfully:", response.data);
     } catch (error) {
@@ -65,9 +66,7 @@ const AddForm = () => {
           <label htmlFor="author">Author</label>
 
           <select className="ml-24 w-[25rem] h-7" name="author" id="author">
-
-            <option disabled defaultValue={"Select an Author"}>Select an Author</option>
-            <option disabled selected></option>
+            <option disabled defaultValue={"Select an Author"}>Select annn</option>
             {authors.map((author) => {
               return (
                 <option key={author._id} value={author._id}  >
@@ -81,11 +80,11 @@ const AddForm = () => {
           <br />
           <div className="flex">
             <div className="flex flex-col">
-              <label htmlFor="coverpage">Cover Page</label>
+              <label htmlFor="coverPicture">Cover Page</label>
               <input
                 type="file"
-                name="coverpage"
-                id="coverpage"
+                name="coverPicture"
+                id="coverPicture"
                 className="border-2"
               />
             </div>

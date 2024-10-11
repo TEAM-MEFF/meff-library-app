@@ -67,11 +67,12 @@ const SignUp = () => {
                             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 mb-6"
                         />
                     </label>
+
                     <button
                         type="submit"
                         className="w-full bg-[#0E345A] text-white py-3 rounded-lg hover:bg-[#0e345ade] transition-colors mb-5"
-                    >
-                        Submit
+                    ><Link to="/login">
+                            Sign Up</Link>
                     </button>
                     <div>
                         <p className="p line mb-3">Or Sign Up With</p>
@@ -82,7 +83,7 @@ const SignUp = () => {
                     </div>
                     <p className="text-center text-sm text-gray-600 mt-5">
                         Already have an account?{" "}
-                        <Link className="text-blue-600 font-semibold hover:underline">
+                        <Link className="text-blue-600 font-semibold hover:underline" to="/login">
                             Sign in
                         </Link>
                     </p>

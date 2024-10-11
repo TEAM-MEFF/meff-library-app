@@ -8,19 +8,25 @@ import SignUp from "../../components/SignUp";
 import Login from "../../components/Login";
 import Testimonies from "../../components/Testimonies";
 import BookFetch from "../bookFetch/BookFetch";
+import BookFetchMain from "../bookFetchMain";
+import Library from "../floatingButton";
 
 
 const BookList = () => {
   return (
     <div className="landingPage">
       <NavbarResponsive />
+      {/* <Library /> */}
       <Hero />
       {/* <Link to="/add-new">Add Book</Link> */}
+      <BookFetchMain />
+      <hr className="mt-5" />
       <BookFetch />
-      <SignUp />
-      <Login />
+      <hr className="mt-5" />
+      {/* <SignUp /> */}
+      {/* <Login /> */}
       <Testimonies />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <div>BookList Content goes here</div> */}
       <Footer />
     </div>
