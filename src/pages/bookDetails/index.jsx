@@ -1,5 +1,6 @@
 import EditForm from "../../components/EditForm";
 import Testimonies from "../../components/Testimonies";
+import Library from "../floatingButton";
 
 const BookDetails = () => {
   return (
@@ -8,8 +9,8 @@ const BookDetails = () => {
       {/* <Testimonies /> */}
       <br />
       <h1>Hi</h1>
-      <EditForm/>
-    
+      <Library />
+      <EditForm />
       <button className="border-2">Submit</button>
     </div>
   )

@@ -23,19 +23,19 @@
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  transform: rotateX(-180deg);
 }
 
 .flip-card-front,
 .flip-card-back {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
 }
 
 .flip-card-back {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 
 .names {
@@ -113,4 +113,8 @@
 .form {
   background-image: url("./components/backgroundform.jpg");
   background-repeat: no-repeat;
+}
+
+.construction {
+  background-image: url(../src/assets/images/libraryImage1.jpg);
 }

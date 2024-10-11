@@ -39,18 +39,21 @@ const Testimonies = () => {
     ];
 
     return (
-        <div className="grid p-5 grid-cols-4">
-            {testimonials.map((testimonial, index) => (
-                <TestimonialCard
-                    key={index}
-                    image={testimonial.image}
-                    name={testimonial.name}
-                    rating={testimonial.rating}
-                    reviewDate={testimonial.reviewDate}
-                    summary={testimonial.summary}
-                    review={testimonial.review}
-                />
-            ))}
+        <div>
+            <h1 className="text-3xl text-blue-900 font-bold pl-10 pt-14">What Our Users Are Saying</h1>
+            <div className="grid p-8 sm:grid-col-2 8 md:grid-cols-4">
+                {testimonials.map((testimonial, index) => (
+                    <TestimonialCard
+                        key={index}
+                        image={testimonial.image}
+                        name={testimonial.name}
+                        rating={testimonial.rating}
+                        reviewDate={testimonial.reviewDate}
+                        summary={testimonial.summary}
+                        review={testimonial.review}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

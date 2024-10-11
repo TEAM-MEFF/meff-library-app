@@ -3,6 +3,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import BookList from './pages/booklist'
 import AddBook from './pages/addBook'
 import BookDetails from './pages/bookDetails';
+import SignUp from './components/SignUp';
+import Login from './components/Login';
+import UnderConstruction from './pages/underConstruction';
 
 function App() {
   const router = createBrowserRouter([
@@ -19,16 +22,16 @@ function App() {
       element: <BookDetails />
     },
     {
-      path: "/edit",
-      element: <BookList />
+      path: "/sign-up/",
+      element: <SignUp />
     },
     {
-      path: "/add-new",
-      element: <AddBook />
+      path: "/login/",
+      element: <Login />
     },
     {
-      path: "/books/:id",
-      element: <BookDetails />
+      path: "/pending",
+      element: <UnderConstruction />
     },
   ]);
 
