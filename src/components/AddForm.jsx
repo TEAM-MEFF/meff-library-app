@@ -65,6 +65,8 @@ const AddForm = () => {
           <label htmlFor="author">Author</label>
 
           <select className="ml-24 w-[25rem] h-7" name="author" id="author">
+
+            <option disabled defaultValue={"Select an Author"}>Select an Author</option>
             <option disabled selected></option>
             {authors.map((author) => {
               return (
