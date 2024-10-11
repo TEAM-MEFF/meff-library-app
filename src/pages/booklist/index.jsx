@@ -13,16 +13,16 @@ import BookFetch from "../bookFetch/BookFetch";
 const BookList = () => {
   return (
     <div className="landingPage">
-      {/* <NavbarResponsive /> */}
-      {/* <Hero /> */}
+      <NavbarResponsive />
+      <Hero />
       {/* <Link to="/add-new">Add Book</Link> */}
       <BookFetch />
-      {/* <SignUp /> */}
-      {/* <Login /> */}
-      {/* <Testimonies /> */}
-      {/* <Testimonials /> */}
+      <SignUp />
+      <Login />
+      <Testimonies />
+      <Testimonials />
       {/* <div>BookList Content goes here</div> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

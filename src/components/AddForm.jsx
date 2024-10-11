@@ -26,12 +26,12 @@ const AddForm = () => {
       // Post data to API
       const response = await axios.post(`${BASE_URL}/books`, {
         title: formData.get("title"),
-        author: formData.get("author"),
+        author: formData.get("author.name"),
         publisher: formData.get("publisher"),
         yearOfPublish: formData.get("year-of-publish"),
         pageCount: formData.get("page-count"),
         genre: formData.get("genre"),
-        comment: formData.get("comment"),
+        description: formData.get("description"),
         rating: rating, // Submit the star rating
       });
       console.log("Form submitted successfully:", response.data);
@@ -68,7 +68,7 @@ const AddForm = () => {
             <option disabled selected></option>
             {authors.map((author) => {
               return (
-                <option key={author._id} value={author._id}>
+                <option key={author._id} value={author._id}  >
                   {author.name}
                 </option>
               );
@@ -128,12 +128,12 @@ const AddForm = () => {
           </div>
           <br />
           <div className="flex flex-col">
-            <label htmlFor="comment">Why do you recommend this book?</label>
+            <label htmlFor="description">Why do you recommend this book?</label>
             <textarea
-              name="comment"
-              placeholder="Leave a comment..."
+              name="description"
+              placeholder="Leave a description..."
               className="border-2 h-28"
-              id="comment"
+              id="description"
             ></textarea>
           </div>
           <br />
