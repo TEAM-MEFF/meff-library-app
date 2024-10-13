@@ -1,19 +1,19 @@
-import EditForm from "../../components/EditForm";
-import Testimonies from "../../components/Testimonies";
-import Library from "../floatingButton";
+import BookDetails from "../../components/bookDetails";
+import BookDetailsEdit from "../../components/BookDetailsEdit";
+import BookDetailsMain from "../../components/BookDetailsMain";
+import NavbarResponsive from "../../components/NavbarResponsive";
 
-const BookDetails = () => {
+
+const BookDetailsPage = () => {
   return (
     <div>
-      <h1>BookDetails</h1>
-      {/* <Testimonies /> */}
-      <br />
-      <h1>Hi</h1>
-      <Library />
-      <EditForm />
-      <button className="border-2">Submit</button>
+      <NavbarResponsive />
+      <BookDetails />
+      {/* <BookDetailsEdit /> */}
+      {/* <BookDetailsMain /> */}
+
     </div>
   )
 }
 
-export default BookDetails;
+export default BookDetailsPage;

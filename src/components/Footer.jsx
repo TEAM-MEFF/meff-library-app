@@ -6,7 +6,7 @@ import IonIcon from "@reacticons/ionicons";
 const Footer = () => {
   return (
     <section>
-      <div className=" bg-[#0E345A] py-8">
+      <div className=" bg-themeColor py-8">
         <div className="flex w-full justify-around text-white ">
           <div className="flex flex-col gap-3">
             <h6 className="font-semibold text-2xl mb-3">CONTACT US</h6>
@@ -55,7 +55,7 @@ const Footer = () => {
               <p className="font-bold">Sign up for our newsletter</p>
               <form className="flex flex-col gap-2" action="">
                 <label htmlFor="email">Enter your email here*</label>
-                <input className="border-2 p-3  outline-none bg-[#0E345A] active:border-2" id="email" required type="email" />
+                <input className="border-2 p-3  outline-none bg-themeColor active:border-2" id="email" required type="email" />
                 <div className="flex mt-5 ">
                   <input type="checkbox" name="checkbox" id="checkbox" required className="w-[30px]" />
                   <label className="mt-5 ml-3 mr-8" htmlFor="checkbox">Yes, subscribe me to your newsletter.</label>
@@ -71,8 +71,8 @@ const Footer = () => {
         <div className="flex justify-around ">
           <div className="content-center items- shadow-lg">
             <Link href="#">
-              <span className="bg-[#0E345A] text-lg px-4 py-2  text-white font-bold content-center text-center">MEFF</span>
-              <span href="#" className=" px-2 py-1.5 text-lg text-[#0E345A] content-center hover:bg-[#0E345A] hover:text-white border-[#0E345A] border- border-2 text-center bg-white">LIBRARY</span></Link>
+              <span className="bg-themeColor text-lg px-4 py-2  text-white font-bold content-center text-center">MEFF</span>
+              <span href="#" className=" px-2 py-1.5 text-lg text-themeColor content-center hover:bg-themeColor hover:text-white border-themeColor border- border-2 text-center bg-white">LIBRARY</span></Link>
           </div>
           <div className="flex gap-24 ">
             <ul className="flex gap-x-10 text-slate-400">

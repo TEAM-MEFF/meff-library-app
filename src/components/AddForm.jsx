@@ -42,17 +42,17 @@ const AddForm = () => {
   };
 
   return (
-    <div className="form w-[100%] h-[160vh] pt-20  bg-cover">
+    <div className="form w-[100%] h-[160vh] pt-5  bg-cover">
       <form
         onSubmit={handleSubmit}
-        className="w-fit h-[130vh] bg-gray-100 mx-auto border-4 rounded-lg"
+        className="w-fit bg-gray-100 mx-auto border-4 rounded-lg"
       >
         <br />
-        <div className="m-14">
-          <h3 className="flex justify-center mb-7 font-semibold text-3xl">
+        <div className="p-10">
+          <h3 className="flex justify-center mb-5 font-semibold text-3xl">
             Add A New Book
           </h3>
-          <hr className="border-2 border-[#0E345A]" />
+          <hr className="border-2 border-themeColor" />
           <div className="mt-10">
             <label htmlFor="title">Book Title</label>
             <input
@@ -165,7 +165,7 @@ const AddForm = () => {
           <br />
           <button
             type="submit"
-            className="border-2 flex mx-60 w-36 h-10 justify-center items-center bg-[#0E345A] text-white rounded-lg"
+            className="border-2 flex mx-60 w-36 h-10 justify-center items-center bg-themeColor text-white rounded-lg"
           >
             Submit
           </button>

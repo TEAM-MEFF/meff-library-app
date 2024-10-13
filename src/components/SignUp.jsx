@@ -75,7 +75,11 @@ const SignUp = () => {
                             Sign Up</Link>
                     </button>
                     <div>
-                        <p className="p line mb-3">Or Sign Up With</p>
+                        <div className="flex justify-center items-center gap-3 mx-auto">
+                            <hr className="w-1/3" />
+                            <p className="p line mb-3 text-gray-400 my-2">Or Sign Up With</p>
+                            <hr className="w-1/3" />
+                        </div>
                         <div className="flex-row">
                             <button className="btn google"><IonIcon name="logo-google" className="text-2xl " />Google</button>
                             <button className="btn apple"><IonIcon name="logo-apple" className="text-2xl mb-1" />Apple</button>

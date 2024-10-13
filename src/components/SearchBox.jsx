@@ -11,7 +11,7 @@ const SearchBox = () => {
     return (
         <div
             className={`p-2 mx-5 w-[120px] sm:w-[270px] md:w-[400px] lg:w-[600px] ${inputValue.length > 0 ? 'w-[160px] sm:w-[350px] md:w-[500px] lg:w-[700px]' : 'hover:w-[160px] hover:mx-2 sm:hover:w-[350px] md:hover:w-[500px] lg:hover:w-[700px]'
-                } h-fit bg-[#0E345A] shadow-[2px_2px_20px_rgba(0,0,0,0.08)] rounded-full flex items-center transition-all duration-300`}
+                } h-fit bg-themeColor shadow-[2px_2px_20px_rgba(0,0,0,0.08)] rounded-full flex items-center transition-all duration-300`}
         >
             <div className="flex items-center justify-center fill-white">
                 <svg

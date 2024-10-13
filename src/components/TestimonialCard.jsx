@@ -4,7 +4,7 @@ const TestimonialCard = ({ image, name, rating, reviewDate, summary, review }) =
     return (
         <div className="flip-card">
             <div className="flip-card-inner">
-                <div className="flip-card-front flex flex-col md:flex-row justify-center items-center p-4 bg-[#0E345A] h-40 w-72 gap-5 rounded-lg shadow-lg">
+                <div className="flip-card-front flex flex-col md:flex-row justify-center items-center p-4 bg-themeColor h-40 w-72 gap-5 rounded-lg shadow-lg">
                     <img src={image} alt={name} className="w-28 h-28 rounded-full object-cover" />
                     <div>
                         <h3 className="text-lg text-white font-semibold mb-3">{name}</h3>
@@ -19,7 +19,7 @@ const TestimonialCard = ({ image, name, rating, reviewDate, summary, review }) =
                         <p className="text-sm text-white mt-2">{summary}</p>
                     </div>
                 </div>
-                <div className="flip-card-back flex flex-col justify-center items-center p-4 h-40 w-72 gap-5 bg-[#0E345A] rounded-lg shadow-md">
+                <div className="flip-card-back flex flex-col justify-center items-center p-4 h-40 w-72 gap-5 bg-themeColor rounded-lg shadow-md">
                     <p className="italic text-gray-100"><span className='text-4xl'>"</span>{review}"</p>
                 </div>
             </div>

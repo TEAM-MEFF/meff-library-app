@@ -2,7 +2,7 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import BookList from './pages/booklist'
 import AddBook from './pages/addBook'
-import BookDetails from './pages/bookDetails';
+import BookDetailsPage from './pages/bookDetails';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import UnderConstruction from './pages/underConstruction';
@@ -19,7 +19,7 @@ function App() {
     },
     {
       path: "/books/:id",
-      element: <BookDetails />
+      element: <BookDetailsPage />
     },
     {
       path: "/sign-up/",
