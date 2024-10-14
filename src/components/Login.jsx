@@ -8,8 +8,8 @@ const Login = () => {
             <div className=" flex flex-col items-left justify-center w-[600px] gap-10">
                 <div className="content-center items-center ">
                     <Link href="#">
-                        <span className="bg-[#0E345A] text-4xl px-4 py-2  text-white font-bold content-center text-center">MEFF</span>
-                        <span href="#" className=" px-2 py-1.5 text-4xl text-[#0E345A] content-center hover:bg-[#0E345A] hover:text-white border-[#0E345A] border- border-2 text-center">LIBRARY</span></Link>
+                        <span className="bg-themeColor text-4xl px-4 py-2  text-white font-bold content-center text-center">MEFF</span>
+                        <span href="#" className=" px-2 py-1.5 text-4xl text-themeColor content-center hover:bg-themeColor hover:text-white border-themeColor border- border-2 text-center">LIBRARY</span></Link>
                 </div>
                 <div>
                     <p className="text-xl mb-5">Welcome <span className="italic underline font-semibold">back!</span>🧠</p>
@@ -21,10 +21,10 @@ const Login = () => {
 
             <div className="flex justify-center items-center h-screen ">
                 <form className="bg-white p-6 rounded-2xl shadow-xl max-w-md w-full">
-                    <p className="text-2xl font-semibold text-[#0E345A] relative pl-10 mb-8">
+                    <p className="text-2xl font-semibold text-themeColor relative pl-10 mb-8">
                         Sign In
-                        <span className="mt-[4px] absolute left-[4px] top-[5px] w-4 h-4 bg-[#0E345A] rounded-full"></span>
-                        <span className=" mt-[5px] absolute left-0 top-0 w-6 h-6 animate-pulse bg-[#0E345A] rounded-full opacity-10"></span>
+                        <span className="mt-[4px] absolute left-[4px] top-[5px] w-4 h-4 bg-themeColor rounded-full"></span>
+                        <span className=" mt-[5px] absolute left-0 top-0 w-6 h-6 animate-pulse bg-themeColor rounded-full opacity-10"></span>
                     </p>
                     <label className="w-full relative ">
                         <input
@@ -45,12 +45,16 @@ const Login = () => {
 
                     <button
                         type="submit"
-                        className="w-full bg-[#0E345A] text-white py-3 rounded-lg hover:bg-[#0e345ade] transition-colors mb-5"
+                        className="w-full bg-themeColor text-white py-3 rounded-lg hover:bg-[#0e345ade] transition-colors mb-5"
                     ><Link to="/">
                             Login</Link>
                     </button>
                     <div>
-                        <p className="p line mb-3">Or Sign In With</p>
+                        <div className="flex justify-center items-center gap-3 mx-auto">
+                            <hr className="w-1/3" />
+                            <p className="p line mb-3 text-gray-400 my-2">Or Sign In With</p>
+                            <hr className="w-1/3" />
+                        </div>
                         <div className="flex-row">
                             <button className="btn google"><IonIcon name="logo-google" className="text-2xl " />Google</button>
                             <button className="btn apple"><IonIcon name="logo-apple" className="text-2xl mb-1" />Apple</button>

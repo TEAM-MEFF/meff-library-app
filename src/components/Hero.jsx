@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div>
       <HeroCarousel />
-      <div className='grid sm:flex flex-wrap gap-2 md:flex mt-5 justify-around items-center text-center p-3 bg-[#0E345A]'>
+      <div className='grid sm:flex flex-wrap gap-2 md:flex mt-5 justify-around items-center text-center p-3 bg-themeColor'>
         <div className='border-2 border-white p-2 rounded-lg flex w-[290px] my-auto mx-auto'>
           <img src={sixtyYears} alt="topRated" className='w-[30px] md:w-[80px]' />
           <h1 className='text-sm md:text-xl md:font-semibold text-white pt-2'>Ghana's Largest Online BookShop!</h1>
@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
       </div>
       <br />
-      {/* <div className='flex sm:flex md:flex justify-around items-center text-center pb-1 bg-[#0E345A]'>
+      {/* <div className='flex sm:flex md:flex justify-around items-center text-center pb-1 bg-themeColor'>
         <img src={sixtyYears} alt="topRated" className='w-[60px] md:w-[100px]' />
         <img src={bestSeller} alt="topRated" className='w-[60px] md:w-[120px]' />
         <h1 className='text-3xl md:text-5xl md:font-semibold text-white'>Ghana's Largest Online BookShop!</h1>

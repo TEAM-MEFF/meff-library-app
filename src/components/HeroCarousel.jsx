@@ -55,7 +55,7 @@ const HeroCarousel = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
                     {/* Text on Image */}
-                    <h2 className="text-white text-2xl md:text-4xl font-semibold text-center my-auto w-[900px] h-6">
+                    <h2 className="text-white text-2xl md:text-5xl font-semibold text-center my-auto w-2/3 h-6">
                         {images[currentIndex].text}
                     </h2>
                 </div>
@@ -78,12 +78,12 @@ const HeroCarousel = () => {
             </div>
 
             {/* Dots (for navigation) */}
-            <div className="flex justify-center py-2 bg-[#0e345aa4] w-fit ml-[44%] mt-2 p-2 rounded-lg text-center">
+            <div className="flex justify-center py-2 bg-[#0e345aa4] w-fit mx-auto mt-2 p-2 rounded-lg text-center">
                 {images.map((_, index) => (
                     <div
                         key={index}
                         onClick={() => setCurrentIndex(index)}
-                        className={`cursor-pointer w-3 h-3 mx-1 rounded-full ${currentIndex === index ? 'bg-[#0E345A]' : 'bg-slate-200'
+                        className={`cursor-pointer w-3 h-3 mx-1 rounded-full ${currentIndex === index ? 'bg-themeColor' : 'bg-slate-200'
                             }`}
                     ></div>
                 ))}

@@ -40,8 +40,8 @@ const Testimonies = () => {
 
     return (
         <div>
-            <h1 className="text-3xl text-blue-900 font-bold pl-10 pt-14">What Our Users Are Saying</h1>
-            <div className="grid p-8 sm:grid-col-2 8 md:grid-cols-4">
+            <h1 className="text-3xl text-themeColor font-bold pl-10 pt-14">What Our Users Are Saying</h1>
+            <div className="flex mx-auto my-auto p-5 gap-5 flex-wrap">
                 {testimonials.map((testimonial, index) => (
                     <TestimonialCard
                         key={index}

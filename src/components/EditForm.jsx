@@ -39,7 +39,7 @@ const EditForm = () => {
           <h3 className="flex justify-center mb-7 font-semibold text-3xl">
             Edit Book
           </h3>
-          <hr className="border-2 border-[#0E345A]" />
+          <hr className="border-2 border-themeColor" />
           <div className="mt-10">
             <label htmlFor="title">Book Title</label>
             <input
@@ -109,7 +109,7 @@ const EditForm = () => {
 
           <button
             type="submit"
-            className="border-2 flex ml-20 w-96 h-10 justify-center items-center bg-[#0E345A] text-white rounded-lg"
+            className="border-2 flex ml-20 w-96 h-10 justify-center items-center bg-themeColor text-white rounded-lg"
           >
             Save Changes
           </button>
