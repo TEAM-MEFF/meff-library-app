@@ -10,6 +10,7 @@ import Testimonies from "../../components/Testimonies";
 import BookFetch from "../bookFetch/BookFetch";
 import BookFetchMain from "../bookFetchMain";
 import Library from "../floatingButton";
+import FavoriteBooks from "../../components/FavoriteBooks";
 
 
 const BookList = () => {
@@ -23,6 +24,7 @@ const BookList = () => {
       <hr className="mt-5" />
       <BookFetch />
       <hr className="mt-5" />
+      <FavoriteBooks />
       {/* <SignUp /> */}
       {/* <Login /> */}
       <Testimonies />

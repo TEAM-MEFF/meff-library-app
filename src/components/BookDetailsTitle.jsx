@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom"; // importing useNavigate to redirect after delete...
+import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../constants";
@@ -6,34 +6,16 @@ import IonIcon from "@reacticons/ionicons";
 import { Link } from "react-router-dom";
 import SimilarBooks from "../pages/bookDetails/SimilarBooks";
 
-const BookDetails = () => {
+const BookDetailsTitle = () => {
     const { id } = useParams(); // this helps us to get book ID from URL...
-    const navigate = useNavigate(); // To programmatically navigate after deletion...
     const [book, setBook] = useState(null);
     const [isEditing, setIsEditing] = useState(false); // for showing the edit form when need be...
-    const [formData, setFormData] = useState({
-        title: "",
-        genre: "",
-        datePublished: "",
-        content: "",
-        description: ""
-    }); // for holding updated book details...
-    const [favorites, setFavorites] = useState(() => {
-        // retrieve favorite books from localStorage
-        const savedFavorites = localStorage.getItem("favoriteBooks");
-        return savedFavorites ? JSON.parse(savedFavorites) : [];
-    });
+    const [updatedTitle, setUpdatedTitle] = useState(""); // Store updated title
 
     const getBookDetails = async () => {
         const response = await axios.get(`${BASE_URL}/books/${id}`);
         setBook(response.data);
-        setFormData({
-            title: response.data.title,
-            genre: response.data.genre,
-            datePublished: response.data.datePublished,
-            content: response.data.content,
-            description: response.data.description
-        })
+        setUpdatedTitle(response.data.title); // Pre-fill the form with the current title
     };
 
     useEffect(() => {
@@ -45,48 +27,21 @@ const BookDetails = () => {
     };
 
     const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            [name]: value
-        }))
-        console.log("Updated book data: ", formData); // Log data after every input change
+        setUpdatedTitle(e.target.value); // Update the title state when changed
     };
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form submitted with data: ", formData); // Check if form data is captured
         try {
-            const response = await axios.patch(`${BASE_URL}/books/${id}`, formData); // update all fields...
-            console.log("Update successful: ", response.data); // Check if API call succeeds
-            alert("Book details updated successfully!");
+            // Only update the title field
+            const response = await axios.patch(`${BASE_URL}/books/${id}`, { title: updatedTitle });
+            alert("Book title updated successfully!");
             setIsEditing(false); // Hide the form after submission
             getBookDetails(); // Refresh book details after update
         } catch (error) {
-            alert("Failed to update the book.");
-            console.error("Error updating the book: ", error);
+            alert("Failed to update the book title.");
+            console.error("Error updating the book title: ", error);
         }
-    };
-
-    const handleDeleteClick = async () => {
-        const confirmDelete = window.confirm("Are you sure you want to delete this book?");
-        if (confirmDelete) {
-            try {
-                await axios.delete(`${BASE_URL}/books/${id}`);
-                alert("Book deleted successfully!");
-                navigate("/"); // Redirect to book list after deletion
-            } catch (error) {
-                console.error("Error deleting the book:", error);
-                alert("Failed to delete the book.");
-            }
-        }
-    };
-
-    const handleFavoriteClick = () => {
-        const updatedFavorites = [...favorites, book] // Add the current book to favorite...
-        setFavorites(updatedFavorites);
-        localStorage.setItem("favoriteBooks", JSON.stringify(updatedFavorites)); // save to localStorage
-        alert("Book added favorites!");
     };
 
     if (!book)
@@ -135,35 +90,7 @@ const BookDetails = () => {
                                     <input
                                         type="text"
                                         name="title"
-                                        value={formData.title}
-                                        onChange={handleInputChange}
-                                        className="border-2 w-full px-2 py-1 mb-4"
-                                        placeholder="Edit Title"
-                                    />
-                                    <input
-                                        type="text"
-                                        name="genre"
-                                        value={formData.genre}
-                                        onChange={handleInputChange}
-                                        className="border-2 w-full px-2 py-1 mb-4"
-                                    />
-                                    <input
-                                        type="date"
-                                        name="datePublished"
-                                        value={formData.datePublished}
-                                        onChange={handleInputChange}
-                                        className="border-2 w-full px-2 py-1 mb-4"
-                                    />
-                                    <input
-                                        type="text"
-                                        name="content"
-                                        value={formData.content}
-                                        onChange={handleInputChange}
-                                        className="border-2 w-full px-2 py-1 mb-4"
-                                    />
-                                    <textarea
-                                        name="description"
-                                        value={formData.description}
+                                        value={updatedTitle}
                                         onChange={handleInputChange}
                                         className="border-2 w-full px-2 py-1 mb-4"
                                     />
@@ -171,20 +98,20 @@ const BookDetails = () => {
                                 </form>
                             )
                             }
-                            <div className="cta flex gap-2">
-                                <button className="flex gap-2 py-2 px-2 rounded-full items-center bg-gray-200 text-gray-800 hover:bg-themeColor hover:text-white absolute right-4 top-2 shadow-md" onClick={handleFavoriteClick}>
+                            <div className="cta flex gap-4">
+                                <button className="flex gap-2 py-2 px-2 rounded-full shadow-sm items-center bg-gray-200 text-gray-800 hover:bg-themeColor hover:text-white absolute right-4 top-2">
                                     <IonIcon name="heart-outline" className=" md:text-2xl" />
                                 </button>
-                                <button className="flex gap-2 py-2 px-2 rounded-full shadow-md items-center bg-gray-200 text-gray-800 hover:bg-[#d11a2a] hover:text-white absolute right-4 top-16" onClick={handleDeleteClick}>
+                                <button className="flex gap-2 py-2 px-2 rounded-full shadow-sm items-center bg-gray-200 text-gray-800 hover:bg-[#d11a2a] hover:text-white absolute right-4 top-16">
                                     <IonIcon name="trash-outline" className=" md:text-2xl" />
                                 </button>
-                                <button className="flex gap-2 py-2 px-3 rounded-lg shadow-md items-center border-2 border-themeColor text-themeColor hover:underline hover:bg-blue-900 hover:text-white" onClick={handleEditClick}>
+                                <button onClick={handleEditClick} className="flex gap-2 py-2 px-3 rounded-lg shadow-md items-center bg-gray-200 text-gray-800 hover:bg-themeColor hover:text-white" >
                                     <p className=" text-base">{isEditing ? 'Cancel' : 'Edit Book'}</p>
-                                    <IonIcon name={isEditing ? "close-outline" : "create-outline"} className=" md:text-lg " />
+                                    <IonIcon name={isEditing ? "close-outline" : "create-outline"} className=" md:text-base " />
                                 </button>
-                                <button className="flex gap-2 py-2 px-3 rounded-lg shadow-md items-center bg-themeColor text-white hover:bg-blue-900 hover:underline hover:text-white">
+                                <button className="flex gap-2 py-2 px-3 rounded-lg shadow-md items-center bg-gray-200 text-gray-800 hover:bg-themeColor hover:text-white">
                                     <p className=" text-base">Add to Cart</p>
-                                    <IonIcon name="cart-outline" className=" md:text-lg" />
+                                    <IonIcon name="cart-outline" className=" md:text-base" />
                                 </button>
                             </div>
                         </div>
@@ -193,12 +120,22 @@ const BookDetails = () => {
                 <div className="col-span-1">
                     <div className="container col-span-3 border shadow-md h-fit pl-5">
                         <h1 className="text-3xl text-themeColor font-bold p-2">Similar Books</h1>
-                        <SimilarBooks />
+                        {/* <SimilarBooks /> */}
+
                     </div>
                 </div>
+            </div>
+
+            <div>
+                {/* <Testimonies /> */}
+                {/* <br /> */}
+                {/* <h1>Hi</h1> */}
+                {/* <Library /> */}
+                {/* <EditForm /> */}
+                {/* <button className="border-2">Submit</button> */}
             </div>
         </div>
     )
 }
 
-export default BookDetails;
+export default BookDetailsTitle;
