@@ -31,6 +31,7 @@ const AddForm = () => {
         title: formData.get("title"),
         genre: formData.get("genre"),
         author: formData.get("author"),
+        coverPicture: formData.get("coverPicture"),
         datePublished: formData.get("datePublished"),
         content: formData.get("content"),
         description: formData.get("description"),
@@ -63,6 +64,7 @@ const AddForm = () => {
               name="title"
               id="title"
               className="border-2 w-full h-10 p-2"
+              placeholder="Enter book title..."
             />
           </div>
           <div className="flex gap-10 items-center">
@@ -80,12 +82,13 @@ const AddForm = () => {
           </div>
           <div className="flex justify-between">
             <div className="flex flex-col w-56">
-              <label htmlFor="coverPicture" className="w-32 font-semibold text-lg">Cover Page</label>
+              <label htmlFor="coverPicture" className="w-32 font-semibold text-lg">Cover Image</label>
               <input
-                type="file"
+                type="text"
                 name="coverPicture"
                 id="coverPicture"
                 className="border-2 h-10 p-1"
+                placeholder="Enter path to Book Cover Image"
               />
             </div>
             <div className="flex flex-col w-36">
