@@ -51,10 +51,10 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative w-full mx-auto">
+    <div className="">
       {/* Image and Overlay */}
       <div
-        className="relative w-full h-[450px] bg-center bg-cover duration-500 transition-all ease-in-out"
+        className="relative w-full h-screen bg-center bg-cover duration-1000 transition-all ease-in-out"
         style={{ backgroundImage: `url(${images[currentIndex].src})` }}
       >
         {/* Overlay */}
@@ -68,7 +68,7 @@ const HeroCarousel = () => {
 
       {/* Left Arrow */}
       <div
-        className="absolute top-[50%] left-5 text-white cursor-pointer text-5xl bg-[#0e345aa4] pb-3 px-3 rounded-full"
+        className="absolute top-[50%] left-12 text-white cursor-pointer text-5xl bg-[#389cff86] pb-3 px-3 rounded-full"
         onClick={prevSlide}
       >
         &#8249;
@@ -76,14 +76,14 @@ const HeroCarousel = () => {
 
       {/* Right Arrow */}
       <div
-        className="absolute top-[50%] right-5 text-white cursor-pointer text-5xl bg-[#0e345aa4] pb-3 px-3 rounded-full"
+        className="absolute top-[50%] right-12 text-white cursor-pointer text-5xl bg-[#389cff86] pb-3 px-3 rounded-full"
         onClick={nextSlide}
       >
         &#8250;
       </div>
 
       {/* Dots (for navigation) */}
-      <div className="flex justify-center py-2 bg-[#0e345aa4] w-fit mx-auto mt-2 p-2 rounded-lg text-center">
+      <div className="absolute bottom-12 items-center flex left-1/2 -translate-x-1/2 justify-end py-2 bg-[#389cff86] w-fit mx-auto mt-2 p-2 rounded-lg text-center">
         {images.map((_, index) => (
           <div
             key={index}
