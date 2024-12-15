@@ -1,41 +1,41 @@
-import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import BookList from './pages/booklist'
-import AddBook from './pages/addBook'
-import BookDetailsPage from './pages/bookDetails';
-import SignUp from './components/SignUp';
-import Login from './components/Login';
-import UnderConstruction from './pages/underConstruction';
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import BookList from "./pages/booklist/index.jsx";
+import AddBook from "./pages/addBook/index.jsx";
+import BookDetailsPage from "./pages/bookDetails/index.jsx";
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
+import UnderConstruction from "./pages/underConstruction/index.jsx";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <BookList />
+      element: <BookList />,
     },
     {
       path: "/add-new",
-      element: <AddBook />
+      element: <AddBook />,
     },
     {
       path: "/books/:id",
-      element: <BookDetailsPage />
+      element: <BookDetailsPage />,
     },
     {
       path: "/sign-up/",
-      element: <SignUp />
+      element: <SignUp />,
     },
     {
       path: "/login/",
-      element: <Login />
+      element: <Login />,
     },
     {
       path: "/pending",
-      element: <UnderConstruction />
+      element: <UnderConstruction />,
     },
   ]);
 
-  return <RouterProvider router={router} />
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
