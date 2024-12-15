@@ -8,10 +8,9 @@ import SignUp from "../../components/SignUp";
 import Login from "../../components/Login";
 import Testimonies from "../../components/Testimonies";
 import BookFetch from "../bookFetch/BookFetch";
-import BookFetchMain from "../bookFetchMain";
+import BookFetchMain from "../bookFetchMain/index.jsx";
 import Library from "../floatingButton";
 import FavoriteBooks from "../../components/FavoriteBooks";
-
 
 const BookList = () => {
   return (
@@ -32,7 +31,7 @@ const BookList = () => {
       {/* <div>BookList Content goes here</div> */}
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default BookList;
