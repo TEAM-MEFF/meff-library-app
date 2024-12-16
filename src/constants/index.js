@@ -15,7 +15,7 @@ const K = {
     },
     {
       _id: "book2",
-      coverPicture: "src/assets/images/bookImages/gotg.jpg",
+      coverPicture: "/bookImages/gotg.jpg",
       title: "Guardians of the Galaxy",
       author: "George Orwell",
       genre: "Action",
@@ -26,7 +26,7 @@ const K = {
     },
     {
       _id: "book3",
-      coverPicture: "src/assets/images/bookImages/zootopia.jpeg",
+      coverPicture: "/bookImages/zootopia.jpeg",
       title: "Zootopia",
       author: "James Clear",
       genre: "Cartoon",
@@ -37,7 +37,7 @@ const K = {
     },
     {
       _id: "book4",
-      coverPicture: "src/assets/images/bookImages/robinHood.jpeg",
+      coverPicture: "/bookImages/robinHood.jpeg",
       title: "Robin Hood",
       author: "Van Persie",
       genre: "Action",
@@ -48,7 +48,7 @@ const K = {
     },
     {
       _id: "book5",
-      coverPicture: "src/assets/images/bookImages/walkingDead.jpeg",
+      coverPicture: "/bookImages/walkingDead.jpeg",
       title: "The Walking Dead",
       author: "George Orwell",
       genre: "Action",
@@ -59,7 +59,7 @@ const K = {
     },
     {
       _id: "book6",
-      coverPicture: "src/assets/images/bookImages/xMen.jpg",
+      coverPicture: "/bookImages/xMen.jpg",
       title: "Xmen - Apocalypse",
       author: "James Clear",
       genre: "Fantasy",
@@ -70,7 +70,7 @@ const K = {
     },
     {
       _id: "book7",
-      coverPicture: "src/assets/images/bookImages/bigRescues.jpeg",
+      coverPicture: "/bookImages/bigRescues.jpeg",
       title: "Big Rescues",
       author: "Yuval Noah Harari",
       genre: "Cartoon",
@@ -81,7 +81,7 @@ const K = {
     },
     {
       _id: "book8",
-      coverPicture: "src/assets/images/bookImages/gotg.jpg",
+      coverPicture: "/bookImages/gotg.jpg",
       title: "1984",
       author: "George Orwell",
       genre: "Dystopian",
@@ -92,7 +92,7 @@ const K = {
     },
     {
       _id: "book9",
-      coverPicture: "src/assets/images/bookImages/zootopia.jpeg",
+      coverPicture: "/bookImages/zootopia.jpeg",
       title: "Atomic Habits",
       author: "James Clear",
       genre: "Self-help",
