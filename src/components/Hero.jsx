@@ -19,12 +19,12 @@ const qualitities = [
   {
     id: 3,
     images: yearsOfWork,
-    title: "Your number 1 book selling space!",
+    title: "Your number 1 book Selling Space!",
   },
   {
     id: 4,
     images: topRated,
-    title: "Feel free to rent and return anytime!",
+    title: "Feel free to Rent and Return Anytime!",
   },
 ];
 
@@ -32,71 +32,20 @@ const Hero = () => {
   return (
     <div>
       <HeroCarousel />
-      <div className="grid sm:flex flex-wrap gap-5 md:flex mt-5 justify-around items-center text-center p-5 bg-themeColor">
+      <div className="grid  flex-wrap gap-3 sm:grid-cols-2 lg:grid-cols-4 justify-around items-center text-center py-12 px-2 bg-themeColor">
         {qualitities.map((qualitity) => (
-          <div className="border-2 border-white p-2 rounded-lg flex w-[290px] my-auto mx-auto items-center gap-5">
+          <div className="border-2 border-white px-2 md:px-5 py-2 rounded-lg flex w-[100%] h-full md:w-full lg:min-h-full 2xl:max-w-[380px] my-auto mx-auto items-center gap-3">
             <img
               src={qualitity.images}
               alt={qualitity.title}
-              className="w-[30px] sm:w-[60px] md:w-[80px]"
+              className="w-[50px] sm:w-[70px] md:w-[80px]"
             />
-            <h2 className="text-sm sm:text-lg md:text-xl md:font-semibold text-white">
+            <h2 className="text-base sm:text-lg md:text-xl md:font-semibold text-left text-white font-semibold">
               {qualitity.title}
             </h2>
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-2 sm:flex flex-wrap space-y-5 md:flex mt-5 justify-around items-center text-center p-5 bg-themeColor">
-        <div className="border-2 border-white p-2 rounded-lg flex w-[290px] my-auto mx-auto">
-          <img
-            src={sixtyYears}
-            alt="topRated"
-            className="w-[30px] md:w-[80px]"
-          />
-          <h1 className="text-sm md:text-xl md:font-semibold text-white pt-2">
-            Ghana's Largest Online BookShop!
-          </h1>
-        </div>
-        <div className="border-2 border-white p-2 rounded-lg flex w-[290px] my-auto mx-auto">
-          <img
-            src={bestSeller}
-            alt="topRated"
-            className="w-[30px] md:w-[80px]"
-          />
-          <h1 className="text-sm md:text-xl md:font-semibold text-white pt-2">
-            Internationally Recognized Seller!
-          </h1>
-        </div>
-
-        <div className="border-2 border-white p-1 rounded-lg flex w-[290px] my-auto mx-auto">
-          <img
-            src={yearsOfWork}
-            alt="topRated"
-            className="w-[30px] md:w-[90px]"
-          />
-          <h1 className="text-sm md:text-xl md:font-semibold text-white pt-2">
-            Ghana's Largest Online BookShop!
-          </h1>
-        </div>
-        <div className="border-2 border-white p-2 rounded-lg flex w-[290px] my-auto mx-auto">
-          <img
-            src={topRated}
-            alt="topRated"
-            className="w-[30px] md:w-[100px]"
-          />
-          <h1 className="text-sm md:text-xl md:font-semibold text-white pt-2">
-            Ghana's Largest Online BookShop!
-          </h1>
-        </div>
-      </div>
-      <br />
-      {/* <div className='flex sm:flex md:flex justify-around items-center text-center pb-1 bg-themeColor'>
-        <img src={sixtyYears} alt="topRated" className='w-[60px] md:w-[100px]' />
-        <img src={bestSeller} alt="topRated" className='w-[60px] md:w-[120px]' />
-        <h1 className='text-3xl md:text-5xl md:font-semibold text-white'>Ghana's Largest Online BookShop!</h1>
-        <img src={yearsOfWork} alt="topRated" className='w-[60px] md:w-[130px]' />
-        <img src={topRated} alt="topRated" className='w-[60px] md:w-[120px]' />
-      </div> */}
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
 // import image1 from "../../public/books-bg.png";
@@ -7,19 +8,19 @@ import React, { useState, useEffect } from "react";
 
 const images = [
   {
-    src: "public/books-bg.png",
+    src: "/books-bg.png",
     text: "Welcome to MEFF Library, your premium go to, for all your literacy needs!",
   },
   {
-    src: "public/libraryImage1.jpg",
+    src: "/libraryImage1.jpg",
     text: 'Discover a world of knowledge with our extensive collection of books and resources!"',
   },
   {
-    src: "public/libraryImage2.jpg",
+    src: "/libraryImage2.jpg",
     text: "Empowering minds, one page at a time. Explore, learn, and grow with MEFF Library!",
   },
   {
-    src: "public/libraryImage3.jpg",
+    src: "/libraryImage3.jpg",
     text: "Connecting you to the information you need, anytime, anywhere!",
   },
 ];
@@ -68,18 +69,18 @@ const HeroCarousel = () => {
 
       {/* Left Arrow */}
       <div
-        className="absolute top-[50%] left-12 text-white cursor-pointer text-5xl bg-[#389cff86] pb-3 px-3 rounded-full"
+        className="absolute top-[50%] left-6 md:left-12 text-white cursor-pointer text-5xl bg-[#389cff86] p-1 rounded-full font-bold hover:bg-themeColor"
         onClick={prevSlide}
       >
-        &#8249;
+        <ChevronLeft size={32} />
       </div>
 
       {/* Right Arrow */}
       <div
-        className="absolute top-[50%] right-12 text-white cursor-pointer text-5xl bg-[#389cff86] pb-3 px-3 rounded-full"
+        className="absolute top-[50%] right-6 md:right-12 text-white cursor-pointer text-5xl bg-[#389cff86] p-1 rounded-full hover:bg-themeColor"
         onClick={nextSlide}
       >
-        &#8250;
+        <ChevronRight size={32} />
       </div>
 
       {/* Dots (for navigation) */}
@@ -88,7 +89,7 @@ const HeroCarousel = () => {
           <div
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`cursor-pointer w-3 h-3 mx-1 rounded-full ${
+            className={`cursor-pointer w-3 h-3 mx-1 rounded-full hover:bg-themeColor ${
               currentIndex === index ? "bg-themeColor" : "bg-slate-200"
             }`}
           ></div>

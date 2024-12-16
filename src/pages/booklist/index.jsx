@@ -18,17 +18,11 @@ const BookList = () => {
       <NavbarResponsive />
       {/* <Library /> */}
       <Hero />
-      {/* <Link to="/add-new">Add Book</Link> */}
       <BookFetchMain />
-      <hr className="mt-5" />
       <BookFetch />
-      <hr className="mt-5" />
       <FavoriteBooks />
-      {/* <SignUp /> */}
-      {/* <Login /> */}
       <Testimonies />
       {/* <Testimonials /> */}
-      {/* <div>BookList Content goes here</div> */}
       <Footer />
     </div>
   );
