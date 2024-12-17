@@ -24,11 +24,11 @@ const UnderConstruction = () => {
               required
               type="text"
               placeholder="Enter your email..."
-              className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-base focus:ring-blue-600"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-base focus:ring-blue-600"
             />
             <button
               type="submit"
-              className="bg-themeColor text-white px-3 rounded-lg hover:bg-[#0e345ade] transition-colors text-nowrap py-3"
+              className="bg-themeColor text-white px-3 rounded-lg hover:bg-[#0e345ade] transition-colors text-nowrap py-2"
             >
               Notify Me
             </button>
