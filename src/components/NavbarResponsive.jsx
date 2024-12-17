@@ -13,12 +13,12 @@ const NavbarResponsive = () => {
     <header className="flex px-6 md:flex-col bg-slate-200 w-full fixed top-0 z-50">
       <div className="flex justify-around items-center w-full mx-auto md:justify-between py-2 bg-slate-200 ">
         <div className="content-center items-center">
-          <Link href="#">
+          <Link to={"/"}>
             <span className="bg-themeColor text-base md:text-lg lg:text-xl md:py-2 sm:px-2 py-1 px-1 text-white font-bold content-center text-center border-2 border-themeColor">
               MEFF
             </span>
             <span
-              href="#"
+              to={"/"}
               className="text-base md:text-lg lg:text-xl md:py-2 sm:px-2 py-1 px-1 text-themeColor content-center hover:bg-themeColor hover:text-white border-themeColor border-2 text-center"
             >
               LIBRARY
