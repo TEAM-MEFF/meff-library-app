@@ -1,9 +1,15 @@
 import React from "react";
 import NavbarResponsive from "../../components/NavbarResponsive";
 import pic from "./under.png";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const UnderConstruction = () => {
+  const navigage = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigage("/login");
+  };
   return (
     <div className="flex justify-center items-center h-screen">
       <NavbarResponsive />
@@ -13,7 +19,7 @@ const UnderConstruction = () => {
           <p className="text-center text-lg md:text-xl lg:text-2xl font-semibold">
             Our website is under construction
           </p>
-          <div className="flex gap-2">
+          <form className="flex gap-2" onSubmit={handleSubmit}>
             <input
               required
               type="text"
@@ -22,11 +28,11 @@ const UnderConstruction = () => {
             />
             <button
               type="submit"
-              className=" bg-themeColor text-white px-3 rounded-lg hover:bg-[#0e345ade] transition-colors text-nowrap py-3"
+              className="bg-themeColor text-white px-3 rounded-lg hover:bg-[#0e345ade] transition-colors text-nowrap py-3"
             >
-              <Link to="/login">Notify Me</Link>
+              Notify Me
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
